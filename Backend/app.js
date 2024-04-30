@@ -11,11 +11,23 @@ async function main() {
   const get = await prisma.users.create({
     data: {
       name: "Carlos",
-      lastName: "Melendez"
+      lastName: "Melendez",
+      userName: "Elcante"
     }
   })
   console.log(get)
 }
+
+main()
+
+
+async function hola() {
+  const get = await prisma.Users.findFirst()
+  console.log(get)
+  console.log("hola")
+}
+
+hola()
 */
 
 app.use(router)
